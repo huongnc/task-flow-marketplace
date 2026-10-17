@@ -1,0 +1,13 @@
+{
+  "name": "task-flow-marketplace",
+  "description": "Sequential task workflow on top of superpowers for Claude Code",
+  "owner": { "name": "Chi Huong" },
+  "allowCrossMarketplaceDependenciesOn": ["claude-plugins-official"],
+  "plugins": [
+    {
+      "name": "task-flow",
+      "source": "./plugins/task-flow",
+      "description": "Plan, impact review, subagent implementation with review, verify, user-style test. Depends on superpowers."
+    }
+  ]
+}

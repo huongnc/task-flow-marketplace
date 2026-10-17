@@ -1,0 +1,26 @@
+# .claude/task-flow.md  (copy to your repo's .claude/ and edit)
+Project config read by every task-flow agent.
+
+## Commands
+- typecheck: `npx tsc --noEmit -p tsconfig.json`
+- lint (changed files only, no --fix): `npx eslint <files>`
+- format check: `npx prettier --check <files>`
+- test: `yarn test --no-coverage`
+- build: `yarn build`
+- codegen: `npx prisma generate` (when prisma/schema.prisma changes)
+
+## Conventions / extra review checklist
+- NestJS module layout: controllers/services/dtos/constants
+- Permission checks go through src/common/permission-condition
+- Entity changes must write audit via entity-audit
+- Error messages are i18n keys in src/languages
+
+## Test targets (stage 6, BE)
+- local: http://localhost:3000, DB from .env.docker
+- test/uat: <url>, test accounts: <role -> user/password reference, never real secrets here>
+
+## FE URLs (stage 6, FE)
+- web: <url>
+
+## Never
+- prod anything; running `yarn lint` (auto-fixes whole tree); touching .env*

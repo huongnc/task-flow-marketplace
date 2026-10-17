@@ -1,0 +1,7 @@
+{
+  "name": "task-flow",
+  "description": "Sequential task pipeline layered on superpowers: plan, impact review, subagent implementation with review, verify, user-style test. Run with /task-flow:run <task>.",
+  "version": "1.0.0",
+  "author": { "name": "Chi Huong" },
+  "dependencies": ["superpowers@claude-plugins-official"]
+}
